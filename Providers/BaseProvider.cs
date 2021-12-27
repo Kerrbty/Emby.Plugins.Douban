@@ -129,7 +129,7 @@ namespace Emby.Plugins.Douban
                 Name = data.Title ?? data.Original_Title,
                 OriginalTitle = data.Original_Title,
                 CommunityRating = data.Rating?.Value,
-                Overview = data.Intro,
+                Overview = "&emsp;&emsp;" + data.Intro.Replace("\n", "<br>&emsp;&emsp;"),
                 ProductionYear = int.Parse(data.Year),
                 //HomePageUrl = data.Url,
                 ProductionLocations = data.Countries?.ToArray()
